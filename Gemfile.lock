@@ -1,47 +1,48 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.8)
-      actionpack (= 3.2.8)
-      mail (~> 2.4.4)
-    actionpack (3.2.8)
-      activemodel (= 3.2.8)
-      activesupport (= 3.2.8)
+    actionmailer (3.2.13)
+      actionpack (= 3.2.13)
+      mail (~> 2.5.3)
+    actionpack (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
-      rack (~> 1.4.0)
+      rack (~> 1.4.5)
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
-      sprockets (~> 2.1.3)
-    activemodel (3.2.8)
-      activesupport (= 3.2.8)
+      sprockets (~> 2.2.1)
+    activemodel (3.2.13)
+      activesupport (= 3.2.13)
       builder (~> 3.0.0)
-    activerecord (3.2.8)
-      activemodel (= 3.2.8)
-      activesupport (= 3.2.8)
+    activerecord (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.8)
-      activemodel (= 3.2.8)
-      activesupport (= 3.2.8)
-    activesupport (3.2.8)
-      i18n (~> 0.6)
+    activeresource (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
       multi_json (~> 1.0)
-    addressable (2.3.4)
+    addressable (2.3.5)
     airbrake (3.1.12)
       activesupport
       builder
       json
     arel (3.0.2)
-    aws-sdk (1.11.1)
+    aws-sdk (1.11.3)
       json (~> 1.4)
-      nokogiri (>= 1.4.4)
+      nokogiri (< 1.6.0)
       uuidtools (~> 2.1)
-    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.1.0)
     be_valid_asset (1.2.3)
       rspec
-    bootstrap-sass (2.1.1.0)
+    bootstrap-sass (2.3.2.0)
+      sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.10)
     chunky_png (1.2.8)
@@ -56,7 +57,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.1)
+    coffee-script-source (1.6.3)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -73,8 +74,9 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    devise-async (0.7.0)
+      devise (>= 2.2)
     diff-lcs (1.2.4)
-    ejs (1.1.1)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -85,15 +87,15 @@ GEM
       sass-rails (>= 3.1.1)
     formtastic (2.2.1)
       actionpack (>= 3.0)
-    formtastic-plus-bootstrap (1.1.3)
-      bootstrap-sass (~> 2.1.0)
+    formtastic-plus-bootstrap (1.1.7)
+      bootstrap-sass (~> 2.3)
       formtastic (~> 2.2)
       railties (>= 3.1.0)
       sass-rails
     fssm (0.2.10)
     haml (4.0.3)
       tilt
-    hamlbars (2.0.0)
+    hamlbars (2.0.1)
       execjs (>= 1.2)
       haml
       sprockets
@@ -102,15 +104,15 @@ GEM
     hashie (2.0.5)
     highcharts-rails (3.0.2)
       railties (>= 3.1)
-    hike (1.2.1)
+    hike (1.2.3)
     hirefireapp (0.2.0)
     httpauth (0.2.0)
-    i18n (0.6.4)
+    i18n (0.6.1)
     inherited_resources (1.4.0)
       has_scope (~> 0.5.0)
       responders (~> 0.9)
     journey (1.0.4)
-    jquery-rails (2.2.1)
+    jquery-rails (3.0.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.0.3)
@@ -120,7 +122,7 @@ GEM
       execjs
       multi_json (>= 1.3)
       rake
-    json (1.7.7)
+    json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
     kaminari (0.14.1)
@@ -131,17 +133,16 @@ GEM
       addressable (~> 2.2)
       faraday (~> 0.8)
       multi_json (~> 1.3)
-    mail (2.4.4)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.21)
-    mini_portile (0.5.0)
+    meta-tags (1.5.0)
+      actionpack
+    mime-types (1.23)
     mono_logger (1.1.0)
-    multi_json (1.6.1)
+    multi_json (1.7.7)
     multipart-post (1.2.0)
-    nokogiri (1.6.0)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.5.10)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -168,9 +169,6 @@ GEM
     pusher (0.11.3)
       multi_json (~> 1.0)
       signature (~> 0.1.6)
-    rabl-rails (0.3.3)
-      activesupport (~> 3.0)
-      railties (~> 3.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -180,23 +178,25 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.8)
-      actionmailer (= 3.2.8)
-      actionpack (= 3.2.8)
-      activerecord (= 3.2.8)
-      activeresource (= 3.2.8)
-      activesupport (= 3.2.8)
+    rails (3.2.13)
+      actionmailer (= 3.2.13)
+      actionpack (= 3.2.13)
+      activerecord (= 3.2.13)
+      activeresource (= 3.2.13)
+      activesupport (= 3.2.13)
       bundler (~> 1.0)
-      railties (= 3.2.8)
-    railties (3.2.8)
-      actionpack (= 3.2.8)
-      activesupport (= 3.2.8)
+      railties (= 3.2.13)
+    rails-footnotes (3.7.9)
+      rails (>= 3.0.0)
+    railties (3.2.13)
+      actionpack (= 3.2.13)
+      activesupport (= 3.2.13)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     raindrops (0.11.0)
-    rake (10.0.3)
+    rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.4)
@@ -212,15 +212,15 @@ GEM
       vegas (~> 0.1.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rspec (2.13.0)
-      rspec-core (~> 2.13.0)
-      rspec-expectations (~> 2.13.0)
-      rspec-mocks (~> 2.13.0)
-    rspec-core (2.13.1)
-    rspec-expectations (2.13.0)
+    rspec (2.14.0)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.0)
+    rspec-expectations (2.14.0)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.13.1)
-    sass (3.2.6)
+    rspec-mocks (2.14.0)
+    sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -230,8 +230,9 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    sprockets (2.1.3)
+    sprockets (2.2.2)
       hike (~> 1.2)
+      multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     stripe (1.8.3)
@@ -239,28 +240,32 @@ GEM
       rest-client (~> 1.4)
     tabletastic (0.2.3)
       activesupport (~> 3.0)
-    thor (0.17.0)
-    tilt (1.3.4)
-    treetop (1.4.12)
+    thor (0.18.1)
+    tilt (1.4.1)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     twilio-ruby (3.9.0)
       builder (>= 2.1.2)
       jwt (>= 0.1.2)
       multi_json (>= 1.3.0)
-    tzinfo (0.3.36)
-    uglifier (1.3.0)
+    tzinfo (0.3.37)
+    uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    unicorn (4.6.2)
+    unicorn (4.6.3)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
     uuidtools (2.1.4)
     vegas (0.1.11)
       rack (>= 1.0.0)
+    versionist (1.1.0)
+      rails (>= 3)
+      yard (~> 0.7)
     warden (1.2.1)
       rack (>= 1.0)
+    yard (0.8.6.2)
 
 PLATFORMS
   ruby
@@ -269,19 +274,19 @@ DEPENDENCIES
   airbrake
   aws-sdk
   be_valid_asset
-  bootstrap-sass (~> 2.1.1.0)
+  bootstrap-sass
   cancan
   cocoon
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   compass-rails
   delayed_job_active_record
   devise
-  ejs
+  devise-async
   font-awesome-sass-rails
   formtastic
   formtastic-plus-bootstrap
   haml
-  hamlbars (~> 2.0)
+  hamlbars
   highcharts-rails
   hirefireapp
   inherited_resources
@@ -290,20 +295,22 @@ DEPENDENCIES
   jshintrb
   kaminari
   koala
+  meta-tags
   omniauth
   omniauth-facebook
-  paperclip (~> 3.0)
+  paperclip
   pg
   pusher
-  rabl-rails
-  rails (= 3.2.8)
+  rails (= 3.2.13)
+  rails-footnotes
   rake
   redis
   resque
-  sass-rails (~> 3.2.3)
+  sass-rails
   sprockets
   stripe
   tabletastic
   twilio-ruby
-  uglifier (>= 1.0.3)
+  uglifier
   unicorn
+  versionist

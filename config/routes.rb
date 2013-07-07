@@ -1,4 +1,21 @@
 Messagedly::Application.routes.draw do
+  devise_for :users
+
+  authenticated :user do
+    scope module: 'backend' do
+      root :to => "dashboard#index"
+    end
+  end
+
+  namespace :api do
+    api_version(module: 'V1', header: {name: 'API-VERSION', value: 'v1'}, parameter: {name: "version", value: 'v1'}, path: {value: 'v1'}) do
+      resources :messages
+      resources :devices
+    end
+  end
+
+  root to: "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

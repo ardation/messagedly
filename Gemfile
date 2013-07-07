@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
+ruby "2.0.0"
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.13'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
@@ -15,17 +15,21 @@ group :production do
   gem 'hirefireapp'
 end
 
+group :development do
+	gem 'rails-footnotes'
+end
+
 gem 'sprockets'
 
-gem 'sass-rails',   '~> 3.2.3'
-gem 'bootstrap-sass', '~> 2.1.1.0'
+gem 'sass-rails'
+gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
 gem 'compass-rails'
 
 group :assets do
-  gem 'hamlbars', '~> 2.0'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'hamlbars'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
@@ -38,7 +42,7 @@ gem 'unicorn'
 
 gem 'jshintrb'
 
-gem "paperclip", "~> 3.0"
+gem "paperclip"
 gem 'aws-sdk'
 gem 'haml'
 
@@ -58,10 +62,10 @@ gem 'highcharts-rails'
 
 gem 'stripe'
 
-
-gem 'rabl-rails'
-
-gem 'ejs'
 gem 'delayed_job_active_record'
+gem 'devise-async'
+gem 'versionist'
 
 gem 'pusher'
+
+gem 'meta-tags', :require => 'meta_tags'

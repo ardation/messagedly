@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  channel_name: MyString
+  user_id: 1
+  confirmation_code: MyString
+  access_token: MyString
+
+two:
+  channel_name: MyString
+  user_id: 1
+  confirmation_code: MyString
+  access_token: MyString
