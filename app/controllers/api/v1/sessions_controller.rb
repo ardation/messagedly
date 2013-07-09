@@ -14,7 +14,7 @@ class Api::V1::SessionsController < Devise::SessionsController
     scope = Devise::Mapping.find_scope!(resource_or_scope)
     resource ||= resource_or_scope
     sign_in(resource, warden.user(scope))
-    return render :json => {:success => true, :redirect => stored_location_for(scope) || after_sign_in_path_for(resource), :access_token => warden.user(scope).devices.where(channel_name: params[:device]).first_or_create.access_token}
+    return render :json => {:success => true, :redirect => stored_location_for(scope) || after_sign_in_path_for(resource), :access_token => warden.user(scope).devices.where(channel_name: params[:device][:uuid]).first_or_create.access_token}
   end
 
   def failure
