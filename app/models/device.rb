@@ -1,17 +1,15 @@
 class Device < ActiveRecord::Base
 	belongs_to :user
-	attr_accessible :access_token, :channel_name
-
-	before_create :generate_confirmation_code
-
-	attr_readonly :confirmation_code
+	attr_accessible :channel_name
+	before_create :generate_access_token
+	attr_readonly :access_token
 
 	protected
 
-	def generate_confirmation_code
-		self.confirmation_code = loop do
+	def generate_access_token
+		self.access_token = loop do
 			random_token = SecureRandom.urlsafe_base64(nil, false)
-			break random_token unless Device.where(confirmation_code: random_token).exists?
+			break random_token unless Device.where(access_token: random_token).exists?
 		end
 	end
 end

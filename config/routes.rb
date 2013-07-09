@@ -1,5 +1,5 @@
 Messagedly::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "api/v1/sessions" }
 
   authenticated :user do
     scope module: 'backend' do
@@ -7,12 +7,18 @@ Messagedly::Application.routes.draw do
     end
   end
 
-  namespace :api do
-    api_version(module: 'V1', header: {name: 'API-VERSION', value: 'v1'}, parameter: {name: "version", value: 'v1'}, path: {value: 'v1'}) do
-      resources :messages
-      resources :devices
+
+  devise_scope :user do
+    namespace :api do
+      api_version(module: 'V1', header: {name: 'API-VERSION', value: 'v1'}, parameter: {name: "version", value: 'v1'}, path: {value: 'v1'}) do
+        resources :messages
+        resources :devices
+        resources :sessions, :only => [:create, :destroy]
+      end
     end
   end
+
+  resources :users
 
   root to: "home#index"
 

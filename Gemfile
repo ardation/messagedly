@@ -47,7 +47,6 @@ gem 'aws-sdk'
 gem 'haml'
 
 gem 'kaminari'
-gem 'airbrake'
 
 gem "cancan"
 gem "cocoon"
