@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+  <!--[if lt IE 7]>
+    <html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+  <![endif]-->
+
+  <!--[if IE 7]>
+    <html class="lt-ie9 lt-ie8" lang="en">
+  <![endif]-->
+
+  <!--[if IE 8]>
+    <html class="lt-ie9" lang="en">
+  <![endif]-->
+
+  <!--[if gt IE 8]>
+    <!-->
+    <html lang="en">
+    <!--
+  <![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Messagedly | SMS Through Your Android</title>
+    <meta name="author" content="John">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="Slick Admin Admin UI">
+    <meta name="keywords" content="Slick Admin, Admin UI, Admin Dashboard, John">
+    
+    <script src="js/html5-trunk.js"></script>
+    <%= stylesheet_link_tag "bootstrap", :media => "all" %>
+    <%= stylesheet_link_tag "main", :media => "all" %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag "" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

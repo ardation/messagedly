@@ -20,7 +20,7 @@ Messagedly::Application.routes.draw do
 
   resources :users
 
-  root to: "home#index"
+  root :to => redirect('/users/sign_in')
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
