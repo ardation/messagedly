@@ -165,7 +165,7 @@
                 </div>
               </li>
               <li>
-                <button class="btn btn-xs btn-danger pull-right" onclick="location.href='login.html'">Logout</button>
+                <%= link_to('Sign Out', destroy_user_session_path, :method => :delete, class: "btn btn-danger pull-right") %>
                 <span class="clearfix"></span>
               </li>
             </ul>
@@ -204,7 +204,7 @@
               <div class="icon">
                 <span class="fs1" aria-hidden="true" data-icon="&#xe0d2;"></span>
               </div>
-              UI Elements
+              API Keys
             </a>
           </li>
           <li>
@@ -212,7 +212,7 @@
               <div class="icon">
                 <span class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></span>
               </div>
-              Forms
+              Devices
             </a>
           </li>
           <li>
