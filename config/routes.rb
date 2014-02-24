@@ -4,6 +4,8 @@ Messagedly::Application.routes.draw do
   authenticated :user do
     scope module: 'backend' do
       root :to => "dashboard#index"
+      resources :devices
+      resources :tokens
     end
   end
 

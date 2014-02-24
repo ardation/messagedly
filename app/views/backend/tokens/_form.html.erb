@@ -1,0 +1,13 @@
+<%= semantic_form_for @token || Token.new, builder: FormtasticBootstrap::FormBuilder do |f| %>
+
+    <%= f.inputs do %>
+      <%= f.input :name, :input_html => { :class => 'form-control'} %>
+      <%= f.input :description, :input_html => { :class => 'form-control', :rows => 10} %>
+    <% end %>
+
+    <%= f.actions do %>
+      <%= f.action :submit, :button_html => { :class => 'btn btn-success'} %>
+      <%= f.action :cancel, :as => :link %>
+    <% end %>
+
+  <% end %>

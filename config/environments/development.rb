@@ -36,4 +36,6 @@ Messagedly::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'developer.messagedly.com:5000' }
+
+  ENV['devise_key'] = "dsfjbwkln23klnlkn907erbfhjknbJIBKJB234uGBJK"
 end
