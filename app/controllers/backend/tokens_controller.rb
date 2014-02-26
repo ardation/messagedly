@@ -8,6 +8,7 @@ class Backend::TokensController < InheritedResources::Base
 
   add_breadcrumb "API Tokens", :tokens_path
 
+
   def new
     add_breadcrumb "New", :new_token_path
   end
@@ -26,8 +27,8 @@ class Backend::TokensController < InheritedResources::Base
   end
 
   def show
-    super
-    add_breadcrumb "#{@token.id}", token_path(@token)
+    @token = Token.find params[:id]
+    add_breadcrumb "#{@token.name}", token_path(@token)
   end
 
 

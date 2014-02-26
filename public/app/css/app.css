@@ -37,7 +37,7 @@
 }
 .pad-box {
   padding:7px;
-  padding-top:54px;
+  padding-top:100px;
 }
 #connectionStatus, #subscriptionStatus {
   text-transform: uppercase;

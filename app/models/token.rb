@@ -1,6 +1,5 @@
 class Token < ActiveRecord::Base
   attr_accessible :description, :name
-  attr_reader :token
   belongs_to :user
   validates_presence_of :name
   validates_uniqueness_of :name, scope: [:user_id]
@@ -8,6 +7,10 @@ class Token < ActiveRecord::Base
 
   def short_token
     "#{@attributes["token"].first(5)}..."
+  end
+
+  def token
+    @attributes["token"]
   end
 
   private

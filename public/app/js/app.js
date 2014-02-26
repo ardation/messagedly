@@ -1,12 +1,12 @@
 ( function( $ ) {
 
-	//document.addEventListener("deviceready", onDeviceReady, false);
+	document.addEventListener("deviceready", onDeviceReady, false);
 
   //Browser Friendly
   if (device == undefined)
     var device = {name: "Browser", version: "Version", uuid: "QPDN4KLN4JKB2"};
 
-  function connect() {
+  function onDeviceReady() {
   	// Connect
     var pusher = new Pusher('1268146fc5d29f8982e5');
 
@@ -36,27 +36,6 @@
   	}
 
   }
-
-  $('#login').submit(function() {
-    $("#login :input").blur().prop("disabled", true);
-    $("#login .control-group").removeClass('error');
-    $.post('/api/v1/sessions.json', { remote: true, commit: "Sign in", utf8: "✓", device: {name: device.name, version: device.version, uuid: device.uuid}, user: {email:$('#login-name').val(), password:$('#login-pass').val()} }, function(data) {
-        if (data.success) {
-          $(".login-screen").fadeOut();
-          connect();
-        } else {
-          $("#login :input").blur().prop("disabled", false);
-          $("#login .control-group").addClass('error');
-        }
-
-      });
-    return false;
-  });
-
-  $('#signout').click(function() {
-    $("#login :input").blur().prop("disabled", false);
-    $(".login-screen").fadeIn();
-  });
 
 } )( jQuery );
 
