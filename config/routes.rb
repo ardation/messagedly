@@ -1,4 +1,6 @@
 Messagedly::Application.routes.draw do
+  post 'pusher', to: 'pusher#pusher'
+
   devise_for :users, :controllers => { :sessions => "api/v1/sessions" }
 
   authenticated :user do

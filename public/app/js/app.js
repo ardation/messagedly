@@ -4,16 +4,18 @@
 
   //Browser Friendly
   if (device == undefined)
-    var device = {name: "Browser", version: "Version", uuid: "QPDN4KLN4JKB2"};
+    var device = {name: "Browser", version: "Version", uuid: "UIHBEOIH"};
 
   function onDeviceReady() {
   	// Connect
-    var pusher = new Pusher('1268146fc5d29f8982e5');
+    var pusher = new Pusher('022c72efe2347dfdc402');
 
     pusher.connection.bind('state_change', connectionStateChange);
     var channel = pusher.subscribe(device.uuid);
     channel.bind('pusher:subscription_succeeded', subscriptionSucceeded);
     channel.bind('send_sms', handleMyEvent);
+    channel.bind('unregistered', register);
+    channel.bind('close_registration', close_registration);
 
     window.sms = new SmsPlugin();
 
@@ -34,6 +36,17 @@
       $('#nomessage').remove();
   		$('#myEventData').append('<li><div class="todo-icon fui-arrow-right"></div><div class="todo-content"><h4 class="todo-name">'+data.phone+'</h4><div class="message">'+data.message+'</div></div></li>');
   	}
+
+    function register( data ) {
+      $('#loading').fadeOut(function() {
+        $('#code').text(data.code);
+        $('#joined').fadeIn();
+      });
+    }
+
+    function close_registration ( data ) {
+      $('.login-screen').fadeOut();
+    }
 
   }
 

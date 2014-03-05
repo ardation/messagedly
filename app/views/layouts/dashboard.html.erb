@@ -208,8 +208,8 @@
                 API Tokens
               </a>
             </li>
-            <li>
-              <a href="forms.html">
+            <li class="<%= if params[:controller] == "backend/devices" then "active" end %>">
+              <a href="<%= devices_path %>">
                 <div class="icon">
                   <span class="fs1" aria-hidden="true" data-icon="&#xe0b8;"></span>
                 </div>

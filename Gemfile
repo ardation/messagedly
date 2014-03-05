@@ -71,3 +71,5 @@ gem "breadcrumbs_on_rails"
 gem 'pusher'
 
 gem 'meta-tags', :require => 'meta_tags'
+
+gem 'simple_enum'

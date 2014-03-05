@@ -1,4 +1,4 @@
-<% title "API Tokens" %>
+<% title "My API Tokens" %>
 
 <div class="row">
   <div class="col-md-12">
@@ -19,29 +19,29 @@
           </thead>
           <tbody>
             <% @tokens.each do |token| %>
-              <tr class="gradeX">
-                <td><%= token.name %></td>
-                <td><%= truncate(token.description, length: 80, separator: ' ') %></td>
-                <td><a href="<%= token_path(token) %>"><%= token.short_token %></a></td>
-                <td>
-                  <a href="<%= token_path(token) %>" class="actions-icons">
-                    <i class="icon-search"></i>
-                  </a>
-                  &nbsp;|&nbsp;
-                  <a href="<%= edit_token_path(token) %>" class="actions-icons">
-                    <i class="icon-edit"></i>
-                  </a>
-                  &nbsp;|&nbsp;
-                  <%= link_to "<i class='icon-trash'></i>".html_safe, token_path(token), method: :delete, class: "delete-row", "data-original-title" => "Delete" %>
-                </td>
-              </tr>
+            <tr class="gradeX">
+              <td><%= token.name %></td>
+              <td><%= truncate(token.description, length: 80, separator: ' ') %></td>
+              <td><a href="<%= token_path(token) %>"><%= token.short_token %></a></td>
+              <td>
+                <a href="<%= token_path(token) %>" class="actions-icons">
+                  <i class="icon-search"></i>
+                </a>
+                &nbsp;|&nbsp;
+                <a href="<%= edit_token_path(token) %>" class="actions-icons">
+                  <i class="icon-edit"></i>
+                </a>
+                &nbsp;|&nbsp;
+                <%= link_to "<i class='icon-trash'></i>".html_safe, token_path(token), method: :delete, class: "delete-row", "data-original-title" => "Delete" %>
+              </td>
+            </tr>
             <% end %>
             <% if @tokens.empty? %>
-              <tr>
-                <td colspan="4" class="text-center">
-                  <i class="icon-lock"></i> You have no API Tokens. Why not <a href="<%= new_token_path %>">Create one now</a>.
-                </td>
-              </tr>
+            <tr>
+              <td colspan="4" class="text-center">
+                <i class="icon-lock"></i> You have no API Tokens. Why not <a href="<%= new_token_path %>">Create one now</a>.
+              </td>
+            </tr>
             <% end %>
 
           </tbody>
@@ -50,8 +50,5 @@
       </div>
     </div>
   </div>
-
-</div>
-<!-- Row end -->
 
 </div>

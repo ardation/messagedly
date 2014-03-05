@@ -1,0 +1,11 @@
+<% title "Add Device" %>
+
+<div class="col-md-12">
+  <div class="widget">
+    <div class="widget-body">
+      <%= semantic_form_for Device.new, builder: FormtasticBootstrap::FormBuilder do |f| %>
+        <%= f.input :access_token %>
+      <% end %>
+    </div>
+  </div>
+</div>

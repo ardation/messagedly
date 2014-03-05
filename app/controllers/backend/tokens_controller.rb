@@ -31,7 +31,6 @@ class Backend::TokensController < InheritedResources::Base
     add_breadcrumb "#{@token.name}", token_path(@token)
   end
 
-
   protected
 
   def begin_of_association_chain
